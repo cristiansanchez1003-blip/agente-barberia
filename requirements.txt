@@ -1,0 +1,7 @@
+Flask
+flask-cors
+google-generativeai
+psycopg2-binary
+python-dotenv
+requests
+tzdata
