@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>STANDARD BARBER - Citas</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#604100",
+                        "tertiary-fixed": "#dce2f9",
+                        "outline": "#ac878f",
+                        "on-primary-container": "#590028",
+                        "on-primary-fixed": "#3f001a",
+                        "surface": "#0f131c",
+                        "surface-tint": "#ffb1c4",
+                        "on-tertiary-container": "#23293a",
+                        "on-secondary-fixed": "#281900",
+                        "surface-container-low": "#181b25",
+                        "tertiary": "#bfc6dc",
+                        "on-primary-fixed-variant": "#8f0044",
+                        "inverse-on-surface": "#2c303a",
+                        "background": "#0f131c",
+                        "on-primary": "#65002e",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#8a90a5",
+                        "on-secondary": "#432c00",
+                        "on-surface-variant": "#e5bcc5",
+                        "primary": "#ffb1c4",
+                        "surface-container-lowest": "#0a0e17",
+                        "surface-container-high": "#262a34",
+                        "inverse-primary": "#ba005b",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#141b2b",
+                        "on-surface": "#dfe2ef",
+                        "primary-container": "#ff4a8d",
+                        "on-error": "#690005",
+                        "surface-bright": "#353943",
+                        "secondary": "#fabc4c",
+                        "secondary-fixed-dim": "#fabc4c",
+                        "tertiary-fixed-dim": "#bfc6dc",
+                        "primary-fixed": "#ffd9e1",
+                        "primary-fixed-dim": "#ffb1c4",
+                        "secondary-container": "#bd8717",
+                        "outline-variant": "#5c3f46",
+                        "on-secondary-container": "#3a2600",
+                        "inverse-surface": "#dfe2ef",
+                        "on-tertiary-fixed-variant": "#404758",
+                        "surface-dim": "#0f131c",
+                        "surface-container-highest": "#31353f",
+                        "secondary-fixed": "#ffdeac",
+                        "on-background": "#dfe2ef",
+                        "on-tertiary": "#293041",
+                        "surface-container": "#1c1f29",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#31353f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "20px",
+                        "unit": "4px",
+                        "lg": "24px",
+                        "sm": "8px",
+                        "xxl": "48px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Poppins"],
+                        "headline-lg-mobile": ["Poppins"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Poppins"],
+                        "title-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .cyberpunk-shadow {
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 74, 141, 0.2);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(255, 74, 141, 0.4);
+        }
+        .bg-radial-gradient {
+            background: radial-gradient(circle at 50% 0%, rgba(38, 42, 52, 0.4) 0%, rgba(15, 19, 28, 1) 70%);
+        }
+        /* Custom scrollbar for horizontal lists */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col bg-radial-gradient">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(255,177,196,0.15)] px-lg py-md flex justify-between items-center hidden md:flex">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="font-display text-headline-md tracking-tighter text-on-surface uppercase">STANDARD BARBER</span>
+</div>
+<nav class="flex gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-sm uppercase tracking-widest flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">content_cut</span> Estilos
+            </a>
+<a class="text-secondary opacity-80 scale-95 font-label-sm uppercase tracking-widest flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span> Citas
+            </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-sm uppercase tracking-widest flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span> Club
+            </a>
+</nav>
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-primary border border-primary/30 px-4 py-2 rounded-full">
+            24/7 ACTIVA
+        </div>
+</header>
+<!-- Mobile TopAppBar Equivalent -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(255,177,196,0.15)] px-lg py-md flex justify-between items-center md:hidden">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="font-display text-headline-lg-mobile tracking-tighter text-on-surface uppercase">STANDARD BARBER</span>
+</div>
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-primary border border-primary/30 px-3 py-1 rounded-full">
+            24/7 ACTIVA
+        </div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[100px] pb-[120px] px-md md:px-lg max-w-7xl mx-auto w-full flex flex-col gap-xl">
+<!-- Header Section -->
+<section class="flex flex-col gap-2">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Reservar Cita</h1>
+<p class="text-on-surface-variant font-body-md text-body-md">Selecciona un profesional y horario para tu sesión de grooming.</p>
+</section>
+<!-- Professionals Horizontal List -->
+<section class="flex flex-col gap-md">
+<h2 class="font-label-md text-label-md uppercase tracking-widest text-secondary">Especialistas</h2>
+<div class="flex gap-md overflow-x-auto hide-scrollbar pb-4 -mx-md px-md md:mx-0 md:px-0">
+<!-- Professional Card 1 (Selected) -->
+<div class="min-w-[140px] w-[140px] flex flex-col items-center p-md bg-surface-container/60 backdrop-blur-md rounded-xl border-2 border-primary-container shadow-[0_0_15px_rgba(255,74,141,0.2)] cursor-pointer transition-all">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-3 border border-outline-variant/40">
+<img alt="Barber" class="w-full h-full object-cover" data-alt="Close up portrait of a stylish male barber in a dark, high-end cyberpunk barbershop setting. He is wearing a dark leather apron. Neon magenta and warm gold lighting illuminate his face, highlighting a sharp, professional demeanor. The background features subtle reflections of mirrors and premium grooming products. Cinematic lighting, photorealistic, highly detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgzKEPHiP9Gu54n9UxoEsEAdyzJE40aWJQd9VcI-zoHeJ4q8JG8wfho7CfDSIDvIKnjABNIqAqEHtQY-4eIZE-1lIctXxc-wqXv0OHo2zpZfo9UY_gyxbKLfxftq3IU530gNnQFcGSszliO9E07zz5bnX0zpCFoVg4HDdpRmX29_kzHP30MtDkhy47lHbFVG4u67rDCtW6FEyhxL0Buz-XyPaMfMDacz7g5sZC7Sn3kUpzc70oj_v2VXL_Qx7jVSKVelqhuBFybT4"/>
+</div>
+<span class="font-title-lg text-[16px] font-semibold text-on-surface text-center leading-tight">Marcus V.</span>
+<span class="font-label-sm text-[10px] text-primary-container mt-1 uppercase tracking-wider text-center">Master Barber</span>
+</div>
+<!-- Professional Card 2 -->
+<div class="min-w-[140px] w-[140px] flex flex-col items-center p-md bg-surface-container-low/40 backdrop-blur-md rounded-xl border border-outline-variant/40 hover:border-secondary/50 cursor-pointer transition-all">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-3 border border-outline-variant/40 opacity-70">
+<img alt="Barber" class="w-full h-full object-cover grayscale mix-blend-luminosity" data-alt="Portrait of a focused female barber in a premium, futuristic barbershop. She is holding professional clippers. The scene is lit with a mix of cool blue rim lights and warm champagne gold practical lights from the vanity mirrors. The atmosphere is sophisticated and edgy. Deep shadows, high contrast, cyberpunk aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1dgoYBzxn1esLijB62pVCTJGG3K3b-vxIDPcLStQLwN6mgmV-azIVOSi30NbsD1FZn5qyXb3bgVMXoN_blaEY7Pq1P97rh0oiAwJOiKFTS72t-Ig4HQrFyxkCyaQPnou6mlEArrRGN9jmK7oaQ5HHGete8sq5vamZFgTT5GdjRV1QDFQQYYHsSJzOcqnDquD5o1byU0-YCsgJpDoxfPKi4QccQRRg3JiVpNxiYaYilo6WIt_V1qU1h3UBVfGvRDpzlIV6e1c8wBY"/>
+</div>
+<span class="font-title-lg text-[16px] font-semibold text-on-surface-variant text-center leading-tight">Elena R.</span>
+<span class="font-label-sm text-[10px] text-secondary mt-1 uppercase tracking-wider text-center">Color &amp; Fade</span>
+</div>
+<!-- Professional Card 3 -->
+<div class="min-w-[140px] w-[140px] flex flex-col items-center p-md bg-surface-container-low/40 backdrop-blur-md rounded-xl border border-outline-variant/40 hover:border-secondary/50 cursor-pointer transition-all">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-3 border border-outline-variant/40 opacity-70">
+<img alt="Barber" class="w-full h-full object-cover grayscale mix-blend-luminosity" data-alt="Headshot of an older, distinguished master barber with a well-groomed beard, set in a luxurious, dark-themed salon. Subtle neon pink accents reflect in the background mirrors. He exudes experience and precision. High-end grooming tools are slightly visible in the blurred foreground. Rich textures, dramatic chiaroscuro lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNJ1dq6h-3HJoZhWkgGRSvbh66MnSouM6spH5OTOgHqx9c979yheNLZm38VLgxTEDW7B02o_zMW2Abo4nrh5SqL5PZJcxLU4VKuk37AioTFHVGtwwdAMIf17XKjqcKxd-DmH1lS3VY-Io7nMe5YppVHnT_Fx-q-CZaHioTtwViIawv2DwpvCmeath_Jk8YBsVsKzKrnAwhCXnlfTpInzu8TqVzrTtecCy8dGJxTBfcg5cIJ8UFtHMVqvQf7iAA-JDia3unVgwAsO0"/>
+</div>
+<span class="font-title-lg text-[16px] font-semibold text-on-surface-variant text-center leading-tight">Jax T.</span>
+<span class="font-label-sm text-[10px] text-secondary mt-1 uppercase tracking-wider text-center">Classic Cuts</span>
+</div>
+<!-- Professional Card 4 -->
+<div class="min-w-[140px] w-[140px] flex flex-col items-center justify-center p-md bg-surface-container-low/20 backdrop-blur-md rounded-xl border border-dashed border-outline-variant/40 hover:border-primary/50 cursor-pointer transition-all">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[32px]">group</span>
+</div>
+<span class="font-title-lg text-[16px] font-semibold text-on-surface-variant text-center leading-tight">Cualquiera</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/60 mt-1 uppercase tracking-wider text-center">Próximo Disp.</span>
+</div>
+</div>
+</section>
+<!-- Date & Time Grid Container (Bento Style) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<!-- Date Selector -->
+<section class="flex flex-col gap-md lg:col-span-1 bg-surface-container-low/30 p-lg rounded-2xl border border-outline-variant/30 backdrop-blur-sm cyberpunk-shadow">
+<div class="flex justify-between items-center">
+<h2 class="font-label-md text-label-md uppercase tracking-widest text-secondary">Fecha</h2>
+<span class="font-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">calendar_today</span> Oct 2023</span>
+</div>
+<div class="grid grid-cols-4 gap-3 mt-2">
+<!-- Date Chips -->
+<button class="flex flex-col items-center justify-center py-3 rounded-lg border border-outline-variant/40 bg-surface/50 text-on-surface-variant hover:bg-surface-container hover:border-secondary transition-all">
+<span class="font-label-sm text-[10px] uppercase">Lun</span>
+<span class="font-title-lg text-title-lg">23</span>
+</button>
+<button class="flex flex-col items-center justify-center py-3 rounded-lg border border-primary-container bg-surface/80 text-on-surface drop-shadow-[0_0_10px_rgba(255,74,141,0.3)] transition-all">
+<span class="font-label-sm text-[10px] uppercase text-primary">Mar</span>
+<span class="font-title-lg text-title-lg">24</span>
+</button>
+<button class="flex flex-col items-center justify-center py-3 rounded-lg border border-outline-variant/40 bg-surface/50 text-on-surface-variant hover:bg-surface-container hover:border-secondary transition-all">
+<span class="font-label-sm text-[10px] uppercase">Mié</span>
+<span class="font-title-lg text-title-lg">25</span>
+</button>
+<button class="flex flex-col items-center justify-center py-3 rounded-lg border border-outline-variant/40 bg-surface/50 text-on-surface-variant hover:bg-surface-container hover:border-secondary transition-all">
+<span class="font-label-sm text-[10px] uppercase">Jue</span>
+<span class="font-title-lg text-title-lg">26</span>
+</button>
+</div>
+</section>
+<!-- Time Slots Grid -->
+<section class="flex flex-col gap-md lg:col-span-2 bg-surface-container-low/30 p-lg rounded-2xl border border-outline-variant/30 backdrop-blur-sm cyberpunk-shadow">
+<div class="flex justify-between items-center">
+<h2 class="font-label-md text-label-md uppercase tracking-widest text-secondary">Horarios Disp. (45m)</h2>
+<div class="flex gap-2 items-center">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-[10px] uppercase tracking-widest text-primary-container">En Vivo</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-2">
+<!-- Busy Slot -->
+<div class="relative flex flex-col items-center justify-center py-3 rounded-lg border border-outline-variant/20 bg-surface-variant/30 opacity-50 cursor-not-allowed overflow-hidden">
+<span class="font-body-md text-body-md text-on-surface-variant line-through">10:00 AM</span>
+<div class="absolute inset-0 border-t border-outline-variant/30 transform rotate-[25deg] scale-150 origin-center"></div>
+</div>
+<!-- Available Slot -->
+<button class="flex flex-col items-center justify-center py-3 rounded-lg border border-outline-variant/40 bg-surface/60 text-on-surface hover:border-primary-container hover:drop-shadow-[0_0_15px_rgba(255,74,141,0.4)] transition-all">
+<span class="font-body-md text-body-md">10:45 AM</span>
+</button>
+<!-- Selected Slot -->
+<button class="flex flex-col items-center justify-center py-3 rounded-lg border-2 border-primary-container bg-surface/90 text-on-surface drop-shadow-[0_0_15px_rgba(255,74,141,0.5)] transition-all relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+<span class="font-body-md text-body-md text-primary font-semibold">11:30 AM</span>
+</button>
+<!-- Busy Slot -->
+<div class="relative flex flex-col items-center justify-center py-3 rounded-lg border border-outline-variant/20 bg-surface-variant/30 opacity-50 cursor-not-allowed overflow-hidden">
+<span class="font-body-md text-body-md text-on-surface-variant line-through">12:15 PM</span>
+<div class="absolute inset-0 border-t border-outline-variant/30 transform rotate-[25deg] scale-150 origin-center"></div>
+</div>
+<!-- Available Slot -->
+<button class="flex flex-col items-center justify-center py-3 rounded-lg border border-outline-variant/40 bg-surface/60 text-on-surface hover:border-primary-container hover:drop-shadow-[0_0_15px_rgba(255,74,141,0.4)] transition-all">
+<span class="font-body-md text-body-md">01:00 PM</span>
+</button>
+<!-- Available Slot -->
+<button class="flex flex-col items-center justify-center py-3 rounded-lg border border-outline-variant/40 bg-surface/60 text-on-surface hover:border-primary-container hover:drop-shadow-[0_0_15px_rgba(255,74,141,0.4)] transition-all">
+<span class="font-body-md text-body-md">01:45 PM</span>
+</button>
+<!-- Busy Slot -->
+<div class="relative flex flex-col items-center justify-center py-3 rounded-lg border border-outline-variant/20 bg-surface-variant/30 opacity-50 cursor-not-allowed overflow-hidden">
+<span class="font-body-md text-body-md text-on-surface-variant line-through">02:30 PM</span>
+<div class="absolute inset-0 border-t border-outline-variant/30 transform rotate-[25deg] scale-150 origin-center"></div>
+</div>
+<!-- Available Slot -->
+<button class="flex flex-col items-center justify-center py-3 rounded-lg border border-outline-variant/40 bg-surface/60 text-on-surface hover:border-primary-container hover:drop-shadow-[0_0_15px_rgba(255,74,141,0.4)] transition-all">
+<span class="font-body-md text-body-md">03:15 PM</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Primary CTA -->
+<section class="mt-4 flex justify-center">
+<button class="w-full md:w-auto px-12 py-4 bg-primary-container text-white font-title-lg text-title-lg rounded-xl neon-glow hover:bg-primary-fixed-dim transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">smart_toy</span>
+                Confirmar Reserva con Robot.ia
+            </button>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface-container-lowest/70 backdrop-blur-lg fixed bottom-0 w-full z-50 rounded-t-xl border-t border-outline-variant/30 shadow-[0_-10px_30px_rgba(0,0,0,0.5)] Transition-all cubic-bezier(0.4, 0, 0.2, 1) duration-300 flex justify-around items-center pt-md pb-8 px-lg">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant/60 hover:text-primary/80" href="#">
+<span class="material-symbols-outlined">content_cut</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-display text-primary">Estilos</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary drop-shadow-[0_0_8px_rgba(255,74,141,0.6)]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-display text-primary">Citas</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant/60 hover:text-primary/80" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-display text-primary">Club</span>
+</a>
+</nav>
+<!-- NavigationDrawer (FAB - AI Concierge) -->
+<!-- Positioned above BottomNavBar on mobile -->
+<div class="bg-surface-container-high/95 backdrop-blur-2xl font-body-md text-body-md fixed right-4 bottom-24 w-16 h-16 rounded-full flex items-center justify-center border border-primary/40 shadow-[0_0_25px_rgba(255,74,141,0.4)] shadow-2xl bg-primary-container text-on-primary-container hover:scale-110 hover:rotate-12 transition-transform Pulse animation on active AI status fixed bottom-24 right-6 z-50 cursor-pointer">
+<span class="material-symbols-outlined text-[28px] animate-pulse">forum</span>
+</div>
+</body></html>
